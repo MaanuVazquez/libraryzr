@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "prettier": "^1.16.1",
+    "electron": "^4.0.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "2.1.3"
@@ -16,6 +16,9 @@
     "eject": "react-scripts eject",
     "electron": "electron ."
   },
+  "husky": {
+    "pre-commit": "prettier src/** -c && eslint ./src/** --fix"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -23,7 +26,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "electron": "^4.0.2",
-    "eslint-plugin-react-hooks": "^1.0.1"
+    "prettier": "^1.16.4",
+    "eslint-plugin-react-hooks": "^1.0.1",
+    "husky": "^1.3.1"
   }
 }
